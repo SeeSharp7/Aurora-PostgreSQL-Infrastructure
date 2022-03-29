@@ -8,7 +8,7 @@ export class InfrastructureStack extends cdk.Stack {
 
     // The code that defines your stack goes here
     const vpc = ec2.Vpc.fromLookup(this, "VPC", {
-      isDefault: true
+      isDefault: true //vpc-0b11f5e8f37fd652d
     });
 
     const cluster = new rds.DatabaseCluster(this, 'Database', {
