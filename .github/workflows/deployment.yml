@@ -26,4 +26,4 @@ jobs:
       run:  |
             cd infrastructure/
             yarn install
-            yarn cdk deploy --require-approval never
+            yarn cdk deploy --force --require-approval never
