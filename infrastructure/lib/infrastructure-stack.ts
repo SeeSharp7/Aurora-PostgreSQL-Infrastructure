@@ -15,7 +15,7 @@ export class InfrastructureStack extends cdk.Stack {
       engine: rds.DatabaseClusterEngine.auroraPostgres({ version: rds.AuroraPostgresEngineVersion.VER_13_4 }),
       credentials: rds.Credentials.fromGeneratedSecret('clusteradmin'), // Optional - will default to 'admin' username and generated password
       instanceProps: {
-        instanceType: ec2.InstanceType.of(ec2.InstanceClass.R6G, ec2.InstanceSize.MEDIUM),
+        instanceType: ec2.InstanceType.of(ec2.InstanceClass.R6G, ec2.InstanceSize.LARGE),
         vpc: vpc,
         vpcSubnets: {
           subnetType: ec2.SubnetType.PUBLIC,
